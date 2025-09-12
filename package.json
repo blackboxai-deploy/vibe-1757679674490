@@ -4,10 +4,10 @@
   "private": true,
   "description": "Madrigal Ascension - A next-generation MMORPG with AI-powered assistance",
   "author": "Madrigal Studios",
-   "scripts": {
-    "dev": "PORT=3000 next dev",
-    "build": "next build",
-    "start": "next start",
+  "scripts": {
+    "dev": "node init && PORT=3000 next dev",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "lint": "next lint",
     "export": "next build && next export",
     "electron": "electron .",
@@ -85,7 +85,7 @@
     "postcss": "^8.5.3",
     "tailwindcss": "^4.1.6",
     "tw-animate-css": "^1.2.9",
-     "typescript": "^5",
+    "typescript": "^5",
     "wait-on": "^8.0.4"
   },
   "main": "electron/main.js",
@@ -93,7 +93,7 @@
   "build": {
     "appId": "com.madrigalstudios.madrigal-ascension",
     "productName": "Madrigal Ascension",
-    "copyright": "Copyright © 2024 Madrigal Studios",
+    "copyright": "Copyright \u00a9 2024 Madrigal Studios",
     "directories": {
       "output": "dist"
     },
@@ -108,7 +108,10 @@
       "target": [
         {
           "target": "dmg",
-          "arch": ["x64", "arm64"]
+          "arch": [
+            "x64",
+            "arm64"
+          ]
         }
       ],
       "icon": "assets/icon.png"
@@ -117,7 +120,9 @@
       "target": [
         {
           "target": "nsis",
-          "arch": ["x64"]
+          "arch": [
+            "x64"
+          ]
         }
       ],
       "icon": "assets/icon.png"
@@ -126,7 +131,9 @@
       "target": [
         {
           "target": "AppImage",
-          "arch": ["x64"]
+          "arch": [
+            "x64"
+          ]
         }
       ],
       "icon": "assets/icon.png",
